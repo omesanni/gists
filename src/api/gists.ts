@@ -3,7 +3,7 @@ import axios from 'axios';
 const BASE_URL = 'https://api.github.com';
 const HEADERS = {
   headers: {
-    Authorization: 'token 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',
+    Authorization: 'token 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',
   },
 };
 
