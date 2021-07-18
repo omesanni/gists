@@ -1,4 +1,4 @@
-# Tempo Project
+# Github Gists Project
 This app was built with ReactJS.
 
 ## Tech used
