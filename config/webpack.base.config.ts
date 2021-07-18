@@ -2,12 +2,10 @@ export {};
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
 const ENV = process.env.NODE_ENV || 'development';
-const DEBUG = ENV !== 'production';
 
 module.exports = {
   target: 'web',
@@ -29,15 +27,6 @@ module.exports = {
         test: /\.(ts|tsx)$/,
         use: ['babel-loader', 'awesome-typescript-loader'],
         exclude: /node_modules/,
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          DEBUG ? 'style-loader' : { loader: MiniCssExtractPlugin.loader },
-          { loader: 'css-loader', options: { importLoaders: 1 } },
-          'postcss-loader',
-          'sass-loader',
-        ],
       },
       {
         test: /\.(png|jpg|gif|svg)$/i,
