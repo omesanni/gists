@@ -62,9 +62,9 @@ const Gists = () => {
                   </a>
                 </td>
                 <td>
-                  {getFileTypes(gist).map(language => (
-                    <Tag key={language} isOdd={(i + 1) % 2 !== 0}>
-                      {language}
+                  {getFileTypes(gist).map(type => (
+                    <Tag key={type} isOdd={(i + 1) % 2 !== 0}>
+                      {type}
                     </Tag>
                   ))}
                 </td>

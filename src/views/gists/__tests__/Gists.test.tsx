@@ -1,5 +1,5 @@
 import React from 'react';
-import { screen, render, waitFor, fireEvent } from '@testing-library/react';
+import { screen, render, fireEvent } from '@testing-library/react';
 import Gists from '../Gists';
 import * as api from '../../../api/gists';
 
