@@ -1,8 +1,9 @@
 import React, { useState, useMemo } from 'react';
 import { uniq, debounce } from 'lodash';
 import Forks from './Forks';
+import Tag from '../../components/Tag';
 import Loader from '../../components/Loader';
-import { Tag, Main, Table, SearchInput, GistWrapper, EmptyMessage } from './styles';
+import { Main, Table, FileTags, SearchInput, GistWrapper, EmptyMessage } from './styles';
 import { IGist, getUserGists } from '../../api/gists';
 
 const Gists = () => {
@@ -62,11 +63,13 @@ const Gists = () => {
                   </a>
                 </td>
                 <td>
-                  {getFileTypes(gist).map(type => (
-                    <Tag key={type}>
-                      {type}
-                    </Tag>
-                  ))}
+                  <FileTags>
+                    {getFileTypes(gist).map(type => (
+                      <Tag key={type}>
+                        {type}
+                      </Tag>
+                    ))}
+                  </FileTags>
                 </td>
                 <td>
                   <Forks url={gist.forks_url} />
