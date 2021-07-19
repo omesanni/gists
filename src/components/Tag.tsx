@@ -10,7 +10,6 @@ export const StyledTag = styled.span`
   line-height: 26px;
   padding: 0 20px 0 23px;
   position: relative;
-  margin-bottom: 5px;
 
   &::before {
     background: #ffffff;

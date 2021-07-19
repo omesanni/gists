@@ -107,7 +107,8 @@ export const Table = styled.table`
 `;
 
 export const FileTags = styled.div`
-  ${StyledTag} + ${StyledTag} {
-    margin-left: 15px;
+  ${StyledTag} {
+    margin-right: 15px;
+    margin-bottom: 5px;
   }
 `;
