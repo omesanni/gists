@@ -18,3 +18,7 @@ request to github api is revoked. If this occurs you could either:
     
     2. Remove the HEADERS object in both api functions in gists.ts file located at src/api/ folder. By doing so you can use the github
         api freely but github will place a limit on how many requests you can make to their api.
+
+
+## FURTHER IMPROVEMENT
+Token should be loaded via enviroment variable.
