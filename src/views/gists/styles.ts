@@ -130,13 +130,13 @@ export const Tag = styled.span`
   }
 
   &::after {
-    background: ${props => (props.isOdd ? '#eef3f8' : '#ffffff')};
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: -10px;
     border-bottom: 13px solid transparent;
     border-left: 10px solid #d1e4f1;
     border-top: 13px solid transparent;
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
   }
 `;
