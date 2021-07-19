@@ -33,7 +33,6 @@ export const Main = styled.div`
 export const SearchInput = styled.input`
   width: 300px;
   height: 40px;
-  margin-bottom: 20px;
   box-sizing: border-box;
   font-size: 14px;
   font-weight: 500;
@@ -68,7 +67,7 @@ export const Table = styled.table`
   border-collapse: separate;
   border-radius: 10px;
   border-spacing: 0;
-  margin: 4rem 0;
+  margin: 64px 0;
   width: 100%;
 
   th {
