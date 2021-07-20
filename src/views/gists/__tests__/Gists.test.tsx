@@ -90,7 +90,7 @@ describe('Gists', () => {
         git_pull_url: 'gist url 1',
         files: {
           'test.md': { type: 'text/markdown' },
-          'test.js': { type: 'application/javascript' },
+          'test.js': { type: 'application/javascript', language: 'Javascript' },
         },
       },
       {
@@ -106,14 +106,14 @@ describe('Gists', () => {
 
     render(<Gists />);
 
-    fireEvent.change(await screen.getByTestId('input-search'), { target: { value: 'test' } });
+    fireEvent.change(screen.getByTestId('input-search'), { target: { value: 'test' } });
     jest.runOnlyPendingTimers();
 
     expect(await screen.findByText('gist url 1')).toBeInTheDocument();
     expect(screen.getByText('gist url 2')).toBeInTheDocument();
     expect(screen.getByText('text/plain')).toBeInTheDocument();
     expect(screen.getByText('text/markdown')).toBeInTheDocument();
-    expect(screen.getByText('application/javascript')).toBeInTheDocument();
+    expect(screen.getByText('Javascript')).toBeInTheDocument();
     expect(await screen.findByText('user 1')).toBeInTheDocument();
     expect(screen.getByText('user 3')).toBeInTheDocument();
     expect(screen.getByText('user 4')).toBeInTheDocument();
