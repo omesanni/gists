@@ -10,7 +10,7 @@ const Forks = ({ url }: IProps) => {
   const [forks, setForks] = useState<IFork[]>([]);
 
   useEffect(() => {
-    getForks(url).then((data: IFork[]) => {
+    getForks(url).then(data => {
       let lastThreeForks = data;
       if (data.length > 3) {
         lastThreeForks = data.sort((a, b) => b.created_at.localeCompare(a.created_at)).slice(0, 3);

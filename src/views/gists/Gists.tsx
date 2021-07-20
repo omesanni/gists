@@ -55,7 +55,7 @@ const Gists = () => {
                 </td>
               </tr>
             )}
-            {gists.map((gist, i) => (
+            {gists.map(gist => (
               <tr key={gist.id}>
                 <td>
                   <a href={gist.git_pull_url} target="_blank" rel="noreferrer">
