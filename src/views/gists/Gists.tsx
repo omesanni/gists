@@ -26,8 +26,8 @@ const Gists = () => {
     [],
   );
 
-  const getFileTypes = (gist: IGist): string[] =>
-    uniq(Object.keys(gist.files).map(key => gist.files[key].type));
+  const getFileTypes = ({ files }: IGist): string[] =>
+    uniq(Object.keys(files).map(key => files[key].language || files[key].type));
 
   return (
     <Main>
