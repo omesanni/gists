@@ -1,10 +1,10 @@
 import axios from 'axios';
 
 const BASE_URL = 'https://api.github.com';
-const {GITHUB_TOKEN} = process.env;
+const { GITHUB_TOKEN } = process.env;
 const HEADERS = {
   headers: {
-    ...(GITHUB_TOKEN && {Authorization: `token ${GITHUB_TOKEN}`}),
+    ...(GITHUB_TOKEN && { Authorization: `token ${GITHUB_TOKEN}` }),
   },
 };
 
